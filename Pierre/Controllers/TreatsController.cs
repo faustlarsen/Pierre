@@ -11,7 +11,6 @@ using System.Security.Claims;
 
 namespace Pierre.Controllers
 {
-    [Authorize]
     public class TreatsController : Controller
     {
         private readonly PierreContext _db;
@@ -21,13 +20,13 @@ namespace Pierre.Controllers
             _userManager = userManager;
             _db = db;
         }
-
+  
         public ActionResult Index()
         {
             List<Treat> model = _db.Treats.ToList();
             return View(model);
         }
-
+        [Authorize]
         public ActionResult Create()
         {
             ViewBag.FlavorId = new SelectList(_db.Flavors, "FlavorId", "FlavorName");
@@ -58,7 +57,7 @@ namespace Pierre.Controllers
                 .FirstOrDefault(treat => treat.TreatId == id);
             return View(thisTreat);
         }
-
+        [Authorize]
         public ActionResult Edit(int id)
         {
             var thisTreat = _db.Treats.FirstOrDefault(treats => treats.TreatId == id);
@@ -77,7 +76,7 @@ namespace Pierre.Controllers
             _db.SaveChanges();
             return RedirectToAction("Index");
         }
-
+        [Authorize]
         public ActionResult AddFlavor(int id)
         {
             var thisTreat = _db.Treats.FirstOrDefault(treats => treats.TreatId == id);
@@ -95,7 +94,7 @@ namespace Pierre.Controllers
             _db.SaveChanges();
             return RedirectToAction("Index");
         }
-
+        [Authorize]
         public ActionResult Delete(int id)
         {
             var thisTreat = _db.Treats.FirstOrDefault(treats => treats.TreatId == id);
