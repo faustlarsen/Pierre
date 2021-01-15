@@ -1,0 +1,10 @@
+div#footer {
+  background-color: rgba(255, 255, 255, 0.644);
+  font-family: 'Fredericka the Great', cursive;
+  color: rgb(0, 0, 0);
+  position:fixed;
+  bottom:0px;
+  left:0px;
+  width:100%;
+  text-align: center;
+}
