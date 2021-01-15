@@ -7,12 +7,12 @@
 ## Description 
 
 * The application have user authentication
-*  A user will be able to log in and log out
-*  Only logged in users will have create, update and delete functionality
-*  All users will able to have read functionality
+* A user will be able to log in and log out
+* Only logged in users will have create, update and delete functionality
+* All users will able to have read functionality
 * There is a many-to-many relationship between Treats and Flavors
 * A user will able to navigate to a splash page that lists all treats and flavors
-* Users will be able to click on an individual treat or flavor to see all the treats/flavors that belong to it.
+* Users will be able to click on an individual treat or flavor to see all the treats/flavors that belong to it
 
 ## Installation Requirements
 
@@ -63,9 +63,9 @@ Copy and Paste the following commands in the terminal. (exclude '$' and '>')
 - Start Import
 
 ## ALTERNATIVE DATABASE SETUP
--  `$ cd desktop`- it will navigate to the desktop
--  `$ cd pierre` - it will enter the working folder
--  `$ cd pierre` - it will enter the main project
+- `$ cd desktop`- it will navigate to the desktop
+- `$ cd pierre` - it will enter the working folder
+- `$ cd pierre` - it will enter the main project
 - `$ dotnet ef migrations Initial` - will create database on MySQL Workbench
 - `$ dotnet ef database update` 
 - `$ dotnet run ` - it will launch the app in (localhost:5000)
