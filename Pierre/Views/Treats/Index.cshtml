@@ -1,0 +1,26 @@
+@{
+  Layout = "_Layout";
+}
+
+@using Pierre.Models;
+@model IEnumerable<Pierre.Models.Treat>
+<div class="container card">
+<h1>Treats</h1>
+
+    @if (Model.Any())
+    {
+    <ul>
+        @foreach (Treat treat in Model)
+        {
+            <li>@Html.ActionLink($"{treat.TreatName}", "Details", new { id = treat.TreatId })</li>
+        }
+    </ul>
+    } 
+    else
+    {
+        <h3>No treats have been added yet!</h3>
+    }
+
+    <input class="btn btn-warning" type="button" value="Add New Treat" onclick='location.href="@Url.Action("Create", "Treats")";' />
+    <input class="btn btn-warning" type="button" value="Home" onclick='location.href="@Url.Action("Index", "Home")";' />
+</div>

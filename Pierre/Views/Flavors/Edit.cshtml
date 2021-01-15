@@ -1,0 +1,19 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Pierre.Models.Flavor
+<div class="container card">
+<h4>Edit This Flavor: @Html.DisplayFor(model => model.FlavorName)</h4>
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.FlavorId)
+    @Html.EditorFor(model => model.FlavorName)
+
+    <input class="btn btn-warning" type="submit" value="Save" />
+}
+    </br>
+    <input class="btn btn-warning" type="button" value="Flavors" onclick='location.href="@Url.Action("Index", "Flavors")";' />
+    <input class="btn btn-warning" type="button" value="Home" onclick='location.href="@Url.Action("Index", "Home")";' />
+</div>

@@ -1,0 +1,23 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Pierre.Models.Treat;
+
+<div class="container card">
+<h4>Edit This Treat: @Html.DisplayFor(model => model.TreatName)</h4>
+
+    @using (Html.BeginForm())
+    {
+        @Html.HiddenFor(model => model.TreatId)
+        @Html.EditorFor(model => model.TreatName)
+        <br>
+        @Html.DropDownList("FlavorId")
+        @Html.Label("Select Flavor")
+        <br>
+        <input class="btn btn-warning"  type="submit" value="Save" />
+    }
+    <br>
+    <input class="btn btn-warning" type="button" value="Treats" onclick='location.href="@Url.Action("Index", "Treats")";' />
+    <input class="btn btn-warning" type="button" value="Home" onclick='location.href="@Url.Action("Index", "Home")";' />
+</div> 

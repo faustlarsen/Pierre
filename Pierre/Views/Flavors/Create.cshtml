@@ -7,9 +7,9 @@
     <h4>Add New Flavor</h4>
     @using (Html.BeginForm())
     {
-        @Html.LabelFor(model => model.FlavorName)
-        @Html.TextBoxFor(model => model.FlavorName)
-        <input class="btn btn-warning" type="submit" value="Add New Flavor" />
+        @Html.TextBoxFor(model => model.FlavorName, new { @required = "required" })
+        <input class="btn btn-warning" type="submit" value="ADD" />
     }
+    <br>
     <input class="btn btn-warning" type="button" value="Flavors" onclick='location.href="@Url.Action("Index", "Flavors")";' />
 </div>
