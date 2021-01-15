@@ -1,0 +1,24 @@
+@{
+  Layout = "_Layout";
+}
+
+@using Pierre.ViewModels
+@model RegisterViewModel
+<div class="container card">
+    <h2>Register a new user</h2>
+
+    @using (Html.BeginForm("Register", "Account", FormMethod.Post))
+    {
+        
+        @Html.TextBoxFor(user=> user.Email)
+        @Html.LabelFor(user => user.Email)
+        <br>
+        @Html.PasswordFor(user=> user.Password)
+        @Html.LabelFor(user=> user.Password)
+        <br>
+        @Html.PasswordFor(user=> user.ConfirmPassword)
+        @Html.LabelFor(user=> user.ConfirmPassword)
+        <br>
+        <input class="btn btn-warning" type="submit" value="Register" />
+    }
+</div>

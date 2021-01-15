@@ -1,9 +1,10 @@
 @{
   Layout = "_Layout";
 }
+<div class="container card">
+    <h1>Did you miss Pierre?</h1>
 
-<h1>Did you miss Pierre?</h1>
-
-<p>@Html.ActionLink("Flavors", "Index", "Flavors")</p>
-<p>@Html.ActionLink("Treats", "Index", "Treats")</p>
-<p>@Html.ActionLink("Create an account", "Index", "Account")</p> 
+    <input class="btn btn-warning" type="button" value="Flavors" onclick='location.href="@Url.Action("Index", "Flavors")";' />
+    <input class="btn btn-warning" type="button" value="Treats" onclick='location.href="@Url.Action("Index", "Treats")";' />
+    <input class="btn btn-warning" type="button" value="Create an account" onclick='location.href="@Url.Action("Index", "Account")";' />
+</div.
