@@ -71,5 +71,24 @@ namespace Pierre.Controllers
             _db.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        public ActionResult DeleteAll()
+        {
+            var allFlavors = _db.Flavors.ToList();
+            return View();
+        }
+
+        [HttpPost, ActionName("DeleteAll")]
+            public ActionResult DeleteAllConfirmed()
+        {
+            var allFlavors = _db.Flavors.ToList();
+
+        foreach (var flavor in allFlavors)
+        {
+            _db.Flavors.Remove(flavor);
+        }
+            _db.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }
