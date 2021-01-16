@@ -9,6 +9,35 @@ div#footer {
   text-align: center;
 }
 
-.button1 {
-  width: 250px;
+.nav {
+  background-color: rgba(255, 255, 255, 0.555);
+  color :rgb(0, 0, 0);
+  font-size: large;
 }
+
+.btn {
+  width: 200px;
+  border-radius: 50%;
+}
+
+body {
+  display: auto;
+  background-image: url("https://img.wallpapersafari.com/desktop/1600/900/7/50/6jIB0k.jpg");
+}
+
+.card  {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  padding: 1%;
+  background-color: rgba(255, 255, 255, 0.562);
+  border-radius: 10px;
+  color: rgb(0, 0, 0);
+  width: 4in;
+  align-items: center;
+}
+
+/* #deleteBtn {
+  align-items: center;
+  border-radius: 50%;
+  width: 200px;
+} */

@@ -22,11 +22,12 @@
         @using (Html.BeginForm("DeleteFlavor", "Treats"))
         {
           @Html.Hidden("joinId", @join.FlavorTreatId)
-          <input class="btn btn-warning" type="submit" value="Delete"/>
+          <input class="btn btn-warning"  type="submit" value="Delete"/>
         }
       }
       </ul>
     }
+    <hr>
     <input class="btn btn-warning" type="button" value="Add Treat" onclick='location.href="@Url.Action("Create", "Treats")";' />
     <input class="btn btn-warning" type="button" value="Edit Treat" onclick='location.href="@Url.Action("Edit", "Treats", new { id = Model.TreatId })";' />
     <input class="btn btn-warning" type="button" value="Delete Treat" onclick='location.href="@Url.Action("Delete", "Treats", new { id = Model.TreatId })";' />

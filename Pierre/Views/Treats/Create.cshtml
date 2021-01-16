@@ -11,11 +11,11 @@
     {
         @Html.TextBoxFor(model => model.TreatName)
         <br>
-        @Html.DropDownList("FlavorId")
         @Html.Label("Select Flavor")
+        @Html.DropDownList("FlavorId")
         <br>
         <input class="btn btn-warning" type="submit" value="Add" />
     }
-    <br>
+    
     <input class="btn btn-warning" type="button" value="Treats" onclick='location.href="@Url.Action("Index", "Treats")";' />
 </div>

@@ -4,6 +4,11 @@ namespace Pierre.ViewModels
 {
     public class RegisterViewModel
     {
+
+        [Required]
+        [Display(Name = "Name")]
+        public string UserName { get; set; }
+
         [Required]
         [EmailAddress]
         [Display(Name = "Email")]

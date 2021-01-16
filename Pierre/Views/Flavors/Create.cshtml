@@ -6,8 +6,10 @@
 <div class="container card">
     <h4>Add New Flavor</h4>
     @using (Html.BeginForm())
-    {
+    { 
         @Html.TextBoxFor(model => model.FlavorName, new { @required = "required" })
+        <br>
+        <br>
         <input class="btn btn-warning" type="submit" value="ADD" />
     }
     <br>
