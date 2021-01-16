@@ -27,14 +27,14 @@ In the Terminal
 -  `$ cd ~` - it will navigate to the user's home directory
 -  `$ cd desktop`- it will navigate to the desktop
 -  `$ git clone` ,then copy/paste https://github.com/faustlarsen/Pierre , then press 'enter' - it will create the file on the desktop
--  `$ cd Pierre` - it will enter the folder
+-  `$ cd pierre` - it will enter the folder
 -  `$ code .` - it will launch VSCode ( text editor ) to open the file
 -  `$ touch appsettings.json` - create this file in root directory
 - Copy and paste in appsettings.json file: 
 
 ```
 {
-  "ConnectionStrings": { "DefaultConnection": "Server=localhost;Port=3306;database=pierre;uid=root;pwd=YourPassword;"
+  "ConnectionStrings": { "DefaultConnection": "Server=localhost;Port=3306;database=constantine_yakubovski_pierre;uid=root;pwd=YourPassword;"
   }
 }
 ```
@@ -46,7 +46,7 @@ Copy and Paste the following commands in the terminal. (exclude '$' and '>')
 -  `$ mysql -uroot -pepicodus ` - start MySQL Server 
 -  `$ cd ~` - it will navigate to the user's home directory
 -  `$ cd desktop`- it will navigate to the desktop
--  `$ cd Pierre` - it will enter the folder
+-  `$ cd pierre` - it will enter the folder
 -  `$ dotnet ef database update` - it will generate database
 - `> exit ` - to exit MySQL
 - `$ dotnet restore ` - it will complie the code
@@ -59,7 +59,7 @@ Copy and Paste the following commands in the terminal. (exclude '$' and '>')
 - Choose 'Administration'
 - Then 'Data Import'
 - Choose  'Import Self-Contained File"
-- In browsing tool to select the pierre.sql file that is in the project
+- In browsing tool to select the constantine_yakubovski_pierre.sql file that is in the project
 - Start Import
 
 ## ALTERNATIVE DATABASE SETUP

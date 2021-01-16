@@ -1,10 +1,33 @@
+@using Pierre.Models;
+@model Pierre.Models.GoodiesList;
+
 @{
   Layout = "_Layout";
 }
+
 <div class="container card">
     <h1>Did you miss Pierre?</h1>
 
-    <input class="btn btn-warning" type="button" value="Flavors" onclick='location.href="@Url.Action("Index", "Flavors")";' />
-    <input class="btn btn-warning" type="button" value="Treats" onclick='location.href="@Url.Action("Index", "Treats")";' />
-    <input class="btn btn-warning" type="button" value="Create an account" onclick='location.href="@Url.Action("Index", "Account")";' />
-</div.
+<div class="card">
+    <h4>@Html.ActionLink("Flavors List", "Index", "Flavors")</h4>
+    @if (@Model.FlavorList.Count == 0)
+    {
+        <p>List is empty.</p>
+    }  
+    @foreach (Flavor flavor in Model.FlavorList)
+    {
+        <li>@Html.ActionLink($"{flavor.FlavorName}", "Details", "Flavors", new { id = flavor.FlavorId })</li>
+    }
+</div>
+
+<div class="card">
+    <h4>@Html.ActionLink("Treats List", "Index", "Treats")</h4>
+    @if (@Model.TreatList.Count == 0)
+    {
+        <p>List is empty.</p>
+    }
+    @foreach (Treat treat in Model.TreatList)
+    {
+        <li>@Html.ActionLink($"{treat.TreatName}", "Details", "Treats", new { id = treat.TreatId })</li>
+    }
+</div>
