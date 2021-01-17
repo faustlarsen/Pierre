@@ -2,32 +2,29 @@
 @model Pierre.Models.GoodiesList;
 
 @{
-  Layout = "_Layout";
+    Layout = "_Layout";
 }
 
-<div class="container card">
-    <h1>Did you miss Pierre?</h1>
+    <div class="splash1">
+        <h4>@Html.ActionLink("Flavors List", "Index", "Flavors", new {@class = "nav-link text-dark"})</h4>
+        @if (@Model.FlavorList.Count == 0)
+        {
+            <p>List is empty.</p>
+        }  
+        @foreach (Flavor flavor in Model.FlavorList)
+        {       
+            <li>@($"{flavor.FlavorName}")</li>
+        }
+    </div>
 
-<div class="card">
-    <h4>@Html.ActionLink("Flavors List", "Index", "Flavors")</h4>
-    @if (@Model.FlavorList.Count == 0)
-    {
-        <p>List is empty.</p>
-    }  
-    @foreach (Flavor flavor in Model.FlavorList)
-    {
-        <li>@Html.ActionLink($"{flavor.FlavorName}", "Details", "Flavors", new { id = flavor.FlavorId })</li>
-    }
-</div>
-
-<div class="card">
-    <h4>@Html.ActionLink("Treats List", "Index", "Treats")</h4>
-    @if (@Model.TreatList.Count == 0)
-    {
-        <p>List is empty.</p>
-    }
-    @foreach (Treat treat in Model.TreatList)
-    {
-        <li>@Html.ActionLink($"{treat.TreatName}", "Details", "Treats", new { id = treat.TreatId })</li>
-    }
-</div>
+    <div class="splash2">
+        <h4>@Html.ActionLink("Treats List", "Index", "Treats", new {@class = "nav-link text-dark"})</h4>
+        @if (@Model.TreatList.Count == 0)
+        {
+            <p>List is empty.</p>
+        }
+        @foreach (Treat treat in Model.TreatList)
+        {     
+            <li>@($"{treat.TreatName}")</li>
+        }
+    </div>

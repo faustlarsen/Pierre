@@ -22,6 +22,8 @@
         }
         </ul>
     }
+</div>
+<div class="buttons">
     <input class="btn btn-warning" type="button" value="Add Treat" onclick='location.href="@Url.Action("Create", "Treats", new { id = Model.FlavorId })";' />
     <input class="btn btn-warning" type="button" value="Edit Flavor" onclick='location.href="@Url.Action("Edit", "Flavors", new { id = Model.FlavorId })";' />
     <input class="btn btn-warning" type="button" value="Delete Flavor" onclick='location.href="@Url.Action("Delete", "Flavors", new { id = Model.FlavorId })";' />

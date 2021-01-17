@@ -12,7 +12,7 @@
     <ul>
         @foreach (Treat treat in Model)
         {
-            <li>@Html.ActionLink($"{treat.TreatName}", "Details", new { id = treat.TreatId })</li>
+            <li>@Html.ActionLink($"{treat.TreatName}", "Details", new { id = treat.TreatId } )</li>
         }
     </ul>
     } 
@@ -20,8 +20,8 @@
     {
         <h4>No treats have been added yet!</h4>
     }
-
+</div>
+<div class="buttons">
     <input class="btn btn-warning" type="button" value="Add New Treat" onclick='location.href="@Url.Action("Create", "Treats")";' />
     <input class="btn btn-warning" type="button" value="Delete All Treats" onclick='location.href="@Url.Action("DeleteAll")";' />
-    <input class="btn btn-warning" type="button" value="Home" onclick='location.href="@Url.Action("Index", "Home")";' />
 </div>

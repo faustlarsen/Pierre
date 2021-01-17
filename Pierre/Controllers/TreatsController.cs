@@ -118,7 +118,7 @@ namespace Pierre.Controllers
             _db.SaveChanges();
             return RedirectToAction("Index");
         }
-
+        [Authorize]
         public ActionResult DeleteAll()
         {
             var AllTreats = _db.Treats.ToList();

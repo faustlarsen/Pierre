@@ -16,8 +16,7 @@ div#footer {
 }
 
 .btn {
-  width: 200px;
-  border-radius: 50%;
+  width: 180px; 
 }
 
 body {
@@ -29,15 +28,46 @@ body {
   margin-top: 5%;
   margin-bottom: 5%;
   padding: 1%;
-  background-color: rgba(255, 255, 255, 0.562);
+  background-color: rgba(255, 255, 255, 0.781);
   border-radius: 10px;
   color: rgb(0, 0, 0);
   width: 4in;
   align-items: center;
+  position: center;
 }
 
-/* #deleteBtn {
-  align-items: center;
-  border-radius: 50%;
-  width: 200px;
-} */
+@media (min-width: 768px) {
+
+}
+
+.buttons {
+  height: 00px;
+  position: center;
+  margin-left: 0.48in;
+}
+
+.splash {
+  /* align-items: center;
+  position: center; */
+  /* height: 00px; */
+  padding: 5%;
+  background-color: rgba(255, 255, 255, 0.63);
+}
+
+.splash1 {
+  padding: 1%;
+  border-radius: 5px;
+  width: 50%;
+  float: right;
+  opacity: 0.8;
+  background-color: rgba(255, 255, 255, 0.87);
+}
+
+.splash2 {
+  padding: 1%;
+  border-radius: 5px;
+  width: 50%;
+  float: right;
+  opacity: 0.8;
+  background-color: rgba(255, 255, 255, 0.87);
+}

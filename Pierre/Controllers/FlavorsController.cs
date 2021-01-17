@@ -71,7 +71,7 @@ namespace Pierre.Controllers
             _db.SaveChanges();
             return RedirectToAction("Index");
         }
-
+        [Authorize]
         public ActionResult DeleteAll()
         {
             var allFlavors = _db.Flavors.ToList();

@@ -1,25 +1,34 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Sweet Pierre</title>
-    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css'>
-    <link rel="stylesheet" href="~/css/styles.css">
-  </head>
-  <div class="nav">
-    <nav class="navbar navbar-expand">
-      <h4>Sweet Pierre</h4>
-      <ul class="navbar-nav">
-        <a class="nav-link" href="/">Home</a>
-        <a class="nav-link" href="/Flavors">Flavors</a>
-        <a class="nav-link" href="/Treats">Treats</a>
-        <a class="nav-link" href="/Account/Index">Create Account</a>
-        <a class="nav-link" href="/Account/Login">Log In</a> 
-      </ul>
-      </nav>
+    <head>
+        <meta charset="utf-8">
+        <title>Sweet Pierre</title>
+        <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css'>
+        <link rel="stylesheet" href="~/css/styles.css">
+    </head>
+    <div class="nav">
+        <nav class="navbar navbar-expand">
+            <h4>Sweet Pierre</h4>
+            <ul class="navbar-nav">
+                <a class="nav-link text-dark" href="/">Home</a>
+                <a class="nav-link text-dark" href="/Flavors">Flavors</a>
+                <a class="nav-link text-dark" href="/Treats">Treats</a>
+                @if (User.Identity.IsAuthenticated)
+                {
+                    @Html.ActionLink($"Hello {User.Identity.Name}", "Index", "Account", null,  new {@class = "nav-link text-dark"})
+                } 
+                else
+                {
+                    @Html.ActionLink("Register", "Register", "Account", null, new {@class = "nav-link text-dark"})
+                    @Html.ActionLink("Log In", "Login", "Account", null,  new {@class = "nav-link text-dark"})
+                }
+            </ul>
+        </nav>
     </div>
     <div class="col-md-4" class="container card" style="margin: auto;">
-      @RenderBody()
+        @RenderBody()
     </div>
   @Html.Partial("Footer")
 </html>
+
+
