@@ -2,7 +2,6 @@ using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Pierre.Models;
 
-
 namespace Pierre.Controllers
 {
   public class HomeController : Controller

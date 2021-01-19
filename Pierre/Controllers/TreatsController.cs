@@ -6,8 +6,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
-using System.Threading.Tasks;
-using System.Security.Claims;
 
 namespace Pierre.Controllers
 {
@@ -20,7 +18,7 @@ namespace Pierre.Controllers
             _userManager = userManager;
             _db = db;
         }
-  
+
         public ActionResult Index()
         {
             List<Treat> model = _db.Treats.ToList();
@@ -34,12 +32,8 @@ namespace Pierre.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult> Create(Treat treat, int FlavorId)
+        public ActionResult Create(Treat treat, int FlavorId)
         {
-            var userId = this.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-            var currentUser = await _userManager.FindByIdAsync(userId);
-            treat.User = currentUser;
-
             _db.Treats.Add(treat);
             if (FlavorId != 0)
             {
