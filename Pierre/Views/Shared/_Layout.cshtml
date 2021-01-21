@@ -15,7 +15,7 @@
                 <a class="nav-link text-dark" href="/Treats">Treats</a>
                 @if (User.Identity.IsAuthenticated)
                 {
-                    @Html.ActionLink($"Hello {User.Identity.Name}", "Index", "Account", null,  new {@class = "nav-link text-dark"})
+                    @Html.ActionLink($"Log Out", "Index", "Account", null,  new {@class = "nav-link text-dark"})
                 } 
                 else
                 {

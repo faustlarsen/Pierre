@@ -8,7 +8,7 @@
 <div class="container card">
     @if (User.Identity.IsAuthenticated)
     {
-        <h4>Welcome @($"{User.Identity.Name}")!</h4>
+        <h4>Hello @User.Identity.Name!</h4>
         @using (Html.BeginForm("LogOff", "Account"))
         {
             <input class="btn btn-warning" type="submit" class="btn btn-default" value="Log out" />

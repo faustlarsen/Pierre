@@ -12,10 +12,9 @@
         @Html.TextBoxFor(model => model.TreatName)
         <br>
         @Html.Label("Select Flavor")
-        @Html.DropDownList("FlavorId")
+        @Html.DropDownList("FlavorId", (SelectList)ViewBag.FlavorId, "-no flavors-")
         <br>
         <input class="btn btn-warning" type="submit" value="Add" />
     }
-    
     <input class="btn btn-warning" type="button" value="Treats" onclick='location.href="@Url.Action("Index", "Treats")";' />
 </div>
